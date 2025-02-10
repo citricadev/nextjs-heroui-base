@@ -1,0 +1,236 @@
+// Typography
+$copy-responsive: (
+  sm: (
+      font-size: 12px,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 14px,
+    line-height: 24px
+  ),
+  lg: (
+    font-size: 16px,
+    line-height: 26px
+  )
+);
+.copy {
+  font-family: var(--font-family-c);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($copy-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+}
+
+$display-responsive: (
+  sm: (
+      font-size: 28px,
+      line-height: 36px
+  ),
+  md: (
+    font-size: 56px,
+    line-height: 66px
+  ),
+  lg: (
+    font-size: 56px,
+    line-height: 66px
+  )
+);
+.display {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($display-responsive);
+}
+
+$headline-responsive: (
+  sm: (
+      font-size: 32px,
+      line-height: 33px
+  ),
+  md: (
+    font-size: 64px,
+    line-height: 72px
+  ),
+  lg: (
+    font-size: 64px,
+    line-height: 72px
+  )
+);
+
+.headline {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($headline-responsive);
+}
+$title-responsive: (
+  sm: (
+      font-size: 21px,
+      line-height: 37px
+  ),
+  md: (
+    font-size: 29px,
+    line-height: 37px
+  ),
+  lg: (
+    font-size: 29px,
+    line-height: 37px
+  )
+);
+.title {
+  font-family: var(--font-family-a);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($title-responsive);
+}
+$subtitle-responsive: (
+  sm: (
+      font-size: 10pt,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 14pt,
+    line-height: 22px
+  ),
+  lg: (
+    font-size: 14pt,
+    line-height: 22px
+  )
+);
+.subtitle {
+  font-family: var(--font-family-a);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($subtitle-responsive);
+}
+$label-responsive: (
+  sm: (
+      font-size: 10pt,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 12pt,
+    line-height: 16px
+  ),
+  lg: (
+    font-size: 12pt,
+    line-height: 16px
+  )
+);
+.label {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($label-responsive);
+}
+
+.btn {
+  font-family: var(--font-family-a);
+  font-weight: 500;
+  font-size: var(--btn-size);
+  line-height: var(--btn-height);
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+}
+.btn-link {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  font-size: var(--btn-link-size);
+  line-height: var(--btn-link-height);
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+}
+.btn-big {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  font-size: var(--btn-big-size);
+  line-height: var(--btn-big-height);
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+}
+// Typography colors
+.text-gold-lightest{
+  color: #F4EAD7;
+}
+.text-gold-light{
+  color: #E8D5B0;
+}
+.text-gold-brand{
+  color: #D5B16C;
+}
+.text-gold-dark{
+  color: #A38243;
+}
+.text-gold-darkest{
+  color: #4F3C17;
+}
+
+.text-gray-lightest{
+  color: #B3B3B2; // FALTA DEFINIR
+}
+.text-gray-light{
+  color: #B3B3B2; // FALTA DEFINIR
+}
+.text-gray-brand{
+  color: #B3B3B2;
+}
+.text-gray-dark{
+  color: #555; // FALTA DEFINIR
+}
+.text-gray-darkest{
+  color: #B3B3B2; // FALTA DEFINIR
+}
+
+// background colors
+
+.bg-red-lightest{
+  background-color: #FDD9DC;
+}
+
+.bg-red-light{
+  background-color: #F55764;
+}
+
+.bg-red-brand{
+  background-color: #E40E20;
+}
+
+.bg-red-dark{
+  background-color: #A30A17;
+}
+
+.bg-red-darkest{
+  background-color: #48040A;
+}
+
+.bg-black-brand{
+  background-color: #1D1D1B;
+}
+
+.bg-gold-brand{
+  background-color: #D5B16C;
+}
+
+// color navbar
+
+.navbar-text-color :hover{
+  color: #D5B16C;
+}
+

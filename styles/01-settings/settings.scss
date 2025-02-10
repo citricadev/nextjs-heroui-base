@@ -1,0 +1,232 @@
+@import 'mixins.scss';
+// ==================================================
+// SETTINGS
+// ==================================================
+
+// COLORS
+
+// CITRICA SYSTEM COLORS
+// $color-primary-black: #443C1D;
+// $color-primary-dark: #87783A;
+// $color-primary: #C0AF6D;
+// $color-primary-light: #D4C89B;
+// $color-primary-white: #FCFBF8;
+// $color-secondary: #0B2037;
+// $color-secondary-dark: #1C528C;
+// $color-secondary-mid: #3783D7;
+// $color-secondary-light: #D4E5F7;
+// $color-secondary-white: #F2F7FC;
+
+$color-primary-lightest: #F66F7A;
+$color-primary-light: #F33F4E;
+$color-primary: #E40E20;
+$color-primary-dark:#BB0C1A;
+$color-primary-darkest: #8B0914;
+
+$color-secondary-lightest: #ECDBBC;
+$color-secondary-light: #E0C694;
+$color-secondary: #D5B16C;
+$color-secondary-dark: #CA9C45;
+$color-secondary-darkest: #AB8131;
+
+$color-tertiary-lightest: #FFE699;
+$color-tertiary-light: #FFD552;
+$color-tertiary: #FCBF00;
+$color-tertiary-dark: #DBA600;
+$color-tertiary-darkest: #B28700;
+
+$color-white: #FFFFFF;
+$color-black: #1D1D1B;
+
+$color-neutral-lightest: #F0F0F0;
+$color-neutral-light: #C6C6C2;
+$color-neutral-mid: #8E8E86;
+$color-neutral-dark: #2A2A27;
+$color-neutral-darkest: #1D1D1B;
+//-------------------------------
+// FALTAN DEFINIR SI VAN O NO
+// $color-white : #FFFFFF;
+// $color-black : #353535;
+
+// CITRICA SYSTEM BORDER RADIOUS
+$border-radious-xsm: "";
+$border-radious-sm: "";
+$border-radious-md: "";
+$border-radious-lg: "";
+$border-radious-xlg: "";
+
+// CITRICA SYSTEM BORDER 
+$border-extra-light: "";
+$border-light: "";
+$border-md: "";
+$border-bold: "";
+$border-extra-bold: "";
+
+// FONTS GOOGLE
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap';
+
+// FONTS LOCALES
+@font-face {
+    font-family: "ChunkFiveEx";
+    src: url('../../fonts/Chunkfive_Ex.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Restora";
+    src: url('../../fonts/RestoraExtraLight.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../../fonts/Manrope-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../../fonts/Manrope-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../../fonts/Manrope-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../../fonts/Manrope-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../../fonts/Manrope-Light.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url('../../fonts/Manrope-ExtraLight.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+  
+// CITRICA SYSTEM TYPOGRAPJY
+$font-family-a: 'Manrope';
+$font-family-b: 'Restora', sans-serif;
+$font-family-c: 'Poppins', sans-serif;
+
+// CITRICA SYSTEM OPACITY
+$opacity-1:"";
+$opacity-2:"";
+$opacity-3:"";
+$opacity-4:"";
+$opacity-5:"";
+
+// CITRICA SYSTEM ELEVATION 
+$elevation-level-1: "";
+$elevation-level-2: "";
+$elevation-level-3: "";
+$elevation-level-4: "";
+$elevation-level-5: "";
+
+//--------------
+
+$text-btns: (
+    sm: (
+        font-size: 14pt,
+        font-weight: 500
+    ),
+    md: (
+        font-size: 18pt,
+    ),
+    lg: (
+        font-size: 20pt,
+    )
+);
+
+$font-text: '';
+
+$a-transition: all 0.3s ease-in-out;
+$padding-bottom-default: 20px;
+
+// GRID
+
+// CONTAINER WIDTH AVAILABLE
+    $container__width: 1366px;
+
+// COLS
+    $total-columns__lg: 12;
+    $total-columns__md: 6;
+    $total-columns__sm: 4;
+
+// GUTTER BETWEEN COLS
+    $grid-gutter__lg: 56px;
+    $grid-gutter__md: 20px;
+    $grid-gutter__sm: 20px;
+
+// CONTAINER PADDING (ONLY ONE SIDE)
+    $container-padding__lg: 112px;
+    $container-padding__md: 56px;
+    $container-padding__sm: 32px;
+
+
+// RESPONSIVE
+$root-vars: (
+    sm: (
+        // LAYOUT
+        --container-width: $container__width,
+        --total-columns: $total-columns__sm,
+        --grid-gutter: $grid-gutter__sm,
+        --container-padding: $container-padding__sm,
+        --display-block-only-mobile: block,
+        --display-block-not-mobile: none,
+        // COLORS
+        --color-white: $color-white,
+        --color-black: $color-black,
+        --color-primary: $color-primary,
+        // --color-primary-black: $color-primary-black,
+        --color-primary-dark: $color-primary-dark,
+        --color-secondary: $color-secondary,
+        // FONTS
+        --font-family-a: $font-family-a,
+        --font-family-b: $font-family-b,
+        --font-family-c: $font-family-c,
+        // CUSTOM
+    ),
+    md: (
+        // LAYOUT
+        --total-columns: $total-columns__md,
+        --grid-gutter: $grid-gutter__md,
+        --container-padding: $container-padding__md,
+        --display-block-only-mobile: none,
+        --display-block-not-mobile: block,
+    ),
+    lg: (
+        // LAYOUT
+        --total-columns: $total-columns__lg,
+        --grid-gutter: $grid-gutter__lg,
+        --container-padding: $container-padding__lg,
+        --display-block-only-mobile: none,
+        --display-block-not-mobile: block,
+        --font-size-h1: 100px,
+        --font-size-h2: 90px,
+        --line-height-h1: 102px,
+    ),
+    // Opcionales
+    only-md: (
+        //
+    )
+)
