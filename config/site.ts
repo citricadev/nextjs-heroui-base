@@ -1,62 +1,52 @@
 export type SiteConfig = typeof siteConfig;
+import { Home, ClipboardCheck, Settings, Users, Bell, ShieldCheck } from "lucide-react"
 
 export const siteConfig = {
-	name: "Delix Café",
-	description: "Disfruta una experiencia Delixiosa",
-	navItems: [
+	name: "Proyecto Web",
+	description: "Descripción Proyecto Web",
+	sidebarItems: [
 		{
-			label: "Home",
-			href: "/",
-		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
-	],
-	navMenuItems: [
-		{
-			label: "Profile",
-			href: "/profile",
+			title: "Panel",
+			icon: Home,
+			href: "/panel",
 		},
 		{
-			label: "Dashboard",
-			href: "/dashboard",
+			title: "Acciones requeridas",
+			icon: ClipboardCheck,
+			href: "/acciones",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
+			title: "Configuración de la app",
+			icon: Settings,
+			subItems: [
+				{
+					title: "Básica",
+					href: "/config/basica",
+				},
+				{
+					title: "Avanzada",
+					href: "/config/avanzada",
+				},
+				{
+					title: "Mejorada",
+					href: "/config/mejorada",
+				},
+			],
 		},
 		{
-			label: "Team",
-			href: "/team",
+			title: "Roles de la app",
+			icon: Users,
+			href: "/roles",
 		},
 		{
-			label: "Calendar",
-			href: "/calendar",
+			title: "Alertas",
+			icon: Bell,
+			href: "/alertas",
 		},
 		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
+			title: "Revisión de la app",
+			icon: ShieldCheck,
+			href: "/revision",
 		},
 	],
 	links: {

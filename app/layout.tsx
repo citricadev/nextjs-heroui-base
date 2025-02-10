@@ -5,16 +5,16 @@ import { Providers } from "../shared/providers";
 import { Toaster } from 'react-hot-toast';
 // import SupabaseProvider from './context/supabase-context' <== DESCOMENTAR PARA USAR SUPABASE
 // import { AuthContextProvider } from "./context/AuthContext"; <== DESCOMENTAR PARA USAR AUTH
-import Navbar from "@/shared/components/citrica-ui/organism/navbar";
+import Navbar from "@ui/organism/navbar";
 
 
 
 export const metadata: Metadata = {
 	title: {
-		default: "Gáliz",
-		template: `%s - Gáliz`,
+		default: siteConfig.name,
+		template: `%s -${siteConfig.name}`,
 	},
-	description: "Productora audiovisual en Lima",
+	description: siteConfig.description,
 	themeColor: [
 		{ media: "(prefers-color-scheme: light)", color: "white" },
 		{ media: "(prefers-color-scheme: dark)", color: "black" },
@@ -32,7 +32,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="es" suppressHydrationWarning>
 			<head />
 			<body
 			>

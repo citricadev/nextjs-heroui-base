@@ -24,13 +24,9 @@
       }
     ],
     "paths": {
-
-
-
       "@/*": ["./*"],
       "@ui/*": ["./shared/components/citrica-ui/*"],
       "@citrica/*": ["./styles/07-objects/*"]
-
     }
   },
   "include": [

@@ -19,7 +19,7 @@ module.exports = {
           colors: {
             background: "white",
             primary: {
-              DEFAULT: "#BEF264",
+              DEFAULT: "#222",
               foreground: "#000000",
             },
             focus: "#BEF264",
@@ -29,7 +29,7 @@ module.exports = {
           colors: {
             background: "white",
             primary: {
-              DEFAULT: "#BEF264",
+              DEFAULT: "#222",
               foreground: "#000000",
             },
             focus: "#BEF264",

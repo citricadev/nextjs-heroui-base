@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Col, Container } from '@citrica/objects';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
+import { MenuIcon, XIcon } from "lucide-react"
 
 export const navLinks = [
   {
@@ -65,33 +66,8 @@ const Navbar = () => {
     };
   });
 
-  // Function to highlight active section based on scroll position
-  // const highlightActiveSection = () => {
-  //   const sectionEls = document.querySelectorAll("section");
-  //   let currentSection = "";
-
-  //   sectionEls.forEach((sectionEl) => {
-  //     if (
-  //       sectionEl.offsetTop <= window.scrollY + 120 &&
-  //       sectionEl.offsetTop + sectionEl.clientHeight >= window.scrollY + 120
-  //     ) {
-  //       currentSection = sectionEl.id;
-  //     }
-  //   });
-
-  //   setActive(currentSection);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", highlightActiveSection);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", highlightActiveSection);
-  //   };
-  // });
-
   return (
-    <nav className={`btn w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(0,0,0,0.651)]" : "bg-transparent "}`}>
+    <nav className={`w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(48,43,43,0.65)]" : "bg-primary"}`}>
       <Container>
         <Col noPadding cols={{ lg: 12, md: 6, sm: 4 }} className="h-16 flex justify-between items-center pt-3 pb-3">
           {/* Logo */}
@@ -99,7 +75,7 @@ const Navbar = () => {
             <div>
               <picture >
                 <Link href={"/"} >
-                  <img src='/img/home/Logo-galiz.png' alt="logo-galix" className="logo-home-navbar" />
+                  <img src='/img/citrica-logo.png' alt="logo-galix" className="h-10" />
                 </Link>
               </picture>
             </div>
@@ -108,7 +84,7 @@ const Navbar = () => {
             <div className="flex cursor-pointer">
               <picture >
                 <Link href={"/"} >
-                  <img src={colorbg ? '/img/home/Logo-galiz.png' : '/img/home/Logo-galiz-dark.png'} alt="logo-galix" className="w-[130px]"/>
+                  <img src={colorbg ? '/img/citrica-logo.png' : '/img/citrica-logo.png'} alt="logo-galix" className="h-10"/>
                 </Link>
               </picture>
             </div>
@@ -139,22 +115,21 @@ const Navbar = () => {
 
           {/* Mobile Navigation */}
           <div ref={menuRef} className="only-sm-md justify-end items-center p-1 flex-1 pt-[20px]">
-            <picture>
-              <img
-                src={toggle ? '/img/icons/Menuclose.svg' : '/img/icons/Menu.svg'}
-                alt="menu"
-                className={`w-[40px] h-[40px] object-contain ${pathname === '/' ? 'filter invert' : ''}`}
-                onClick={() => setToggle(!toggle)}
-              />
-            </picture>
-
-            {/* Sidebar */}
+            <button onClick={() => setToggle(!toggle)} className="focus:outline-none">
+              { toggle ? ( 
+                <XIcon color="#FFF"/>
+                ) : ( 
+                <MenuIcon color="#FFF"/>
+                )
+              }
+            </button>
+            {/* Floating Menu */}
             <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-black-gradient absolute top-20 bg-black-brand mx-4 my-2 min-w-[140px] rounded-xl z-50 `}>
               <ul className="list-none flex justify-end items-start flex-1 flex-col">
                 {navLinks.map((nav, index) => (
                   <li
                     key={nav.id}
-                    className={`subtitle navbar-text-color text-white font-medium cursor-pointer text-[16px] ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                    className={`subtitle text-white font-medium cursor-pointer text-[16px] ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={() => {
                       setActive(nav.id);
                       closeSidebar();
