@@ -5,7 +5,7 @@ html{
     -moz-osx-font-smoothing: grayscale; /*Firefox */
     font-family: $font-family-b;
     font-weight: 400;
-    color: $color-white;
+    color: #222;
     scroll-behavior: smooth;
 }
 
@@ -39,12 +39,12 @@ ol, ul{
     list-style: none;
 }
 
-img{
-    display: block;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-}
+// img{
+//     display: block;
+//     max-width: 100%;
+//     width: auto;
+//     height: auto;
+// }
 
 a{
     cursor: pointer;

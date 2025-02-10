@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { ReactNode } from 'react';
+import {Card as CardHeroUI, CardBody as CardBodyHeroUI} from "@heroui/card";
 
-const Card = () => {
+const Card = ({children}: {children: ReactNode}) => {
   return (
-    <div>Card</div>
-  )
+    <CardHeroUI>
+      <CardBodyHeroUI>
+        {children}
+      </CardBodyHeroUI>
+    </CardHeroUI>
+  );
 }
 
 export default Card

@@ -3,26 +3,10 @@ import React, { useEffect, useRef, useState } from "react";
 import { Col, Container } from '@citrica/objects';
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-import { MenuIcon, XIcon } from "lucide-react"
+import { MenuIcon, XIcon } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
-export const navLinks = [
-  {
-    id: "/",
-    title: "Inicio",
-  },
-  {
-    id: "/services",
-    title: "Servicios",
-  },
-  {
-    id: "/proyect",
-    title: "Proyectos",
-  },
-  {
-    id: "/contact",
-    title: "Contacto",
-  },
-];
+
 
 const Navbar = () => {
   const [active, setActive] = useState("Inicio");
@@ -67,7 +51,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(48,43,43,0.65)]" : "bg-primary"}`}>
+    <nav className={`w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(48,43,43,0.65)]" : "bg-secondary"}`}>
       <Container>
         <Col noPadding cols={{ lg: 12, md: 6, sm: 4 }} className="h-16 flex justify-between items-center pt-3 pb-3">
           {/* Logo */}
@@ -92,14 +76,14 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="only-lg-nav list-none gap-9">
-            {navLinks.map((nav, index) => (
+            {siteConfig.navLinks.map((nav, index) => (
               <li
                 key={nav.id}
                 className={`flex cursor-pointer nav_link ${active === nav.id ? "nav_link_active" : ""}`}
                 onClick={() => setActive(nav.id)}
               >
                 <Link
-                  className={`pb-1 ${pathname === '/'
+                  className={`pb-1 px-4 text-white ${pathname === '/'
                       ? (active === nav.id ? 'text-[#F7BB58]' : 'text-[#FFFFFF]')
                       : colorbg
                         ? (active === nav.id ? 'text-[#F7BB58]' : 'text-[#FFFFFF]')
@@ -114,8 +98,8 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Navigation */}
-          <div ref={menuRef} className="only-sm-md justify-end items-center p-1 flex-1 pt-[20px]">
-            <button onClick={() => setToggle(!toggle)} className="focus:outline-none">
+          <div ref={menuRef} className="only-sm-md flex justify-end items-center p-1 flex-1">
+            <button onClick={() => setToggle(!toggle)} className="focus:outline-none cursor-pointer">
               { toggle ? ( 
                 <XIcon color="#FFF"/>
                 ) : ( 
@@ -124,18 +108,18 @@ const Navbar = () => {
               }
             </button>
             {/* Floating Menu */}
-            <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-black-gradient absolute top-20 bg-black-brand mx-4 my-2 min-w-[140px] rounded-xl z-50 `}>
+            <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-black-gradient absolute top-[3px] bg-black-brand mx-4 my-2 min-w-[140px] rounded-xl z-50 `}>
               <ul className="list-none flex justify-end items-start flex-1 flex-col">
-                {navLinks.map((nav, index) => (
+                {siteConfig.navLinks.map((nav, index) => (
                   <li
                     key={nav.id}
-                    className={`subtitle text-white font-medium cursor-pointer text-[16px] ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+                    className={`text-white font-medium cursor-pointer text-[16px] ${index === siteConfig.navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={() => {
                       setActive(nav.id);
                       closeSidebar();
                     }}
                   >
-                    <Link href={`#${nav.id}`} >
+                    <Link href={`#${nav.id}`}>
                       {nav.title}
                     </Link>
                   </li>

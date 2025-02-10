@@ -4,6 +4,20 @@ import { Home, ClipboardCheck, Settings, Users, Bell, ShieldCheck } from "lucide
 export const siteConfig = {
 	name: "Proyecto Web",
 	description: "Descripción Proyecto Web",
+	navLinks: [
+		{
+			id: "/",
+			title: "Inicio",
+		},
+		{
+			id: "/proyect",
+			title: "Proyectos",
+		},
+		{
+			id: "/contact",
+			title: "Contacto",
+		},
+	],
 	sidebarItems: [
 		{
 			title: "Panel",
