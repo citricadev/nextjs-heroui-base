@@ -26,6 +26,7 @@
     "paths": {
       "@/*": ["./*"],
       "@ui/*": ["./shared/components/citrica-ui/*"],
+      "@types/*": ["./shared/types/*"],
       "@citrica/*": ["./styles/07-objects/*"]
     }
   },

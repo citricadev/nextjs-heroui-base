@@ -1,8 +1,9 @@
 import React from 'react'
+import Text from '@ui/atoms/text';
 
 const PanelPage = () => {
   return (
-    <div>Panel Page</div>
+    <div><Text variant="display">Panel Page</Text></div>
   )
 }
 
