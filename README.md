@@ -24,7 +24,7 @@ To create a new project based on this template using `create-next-app`, run the 
 npx create-next-app -e https://github.com/nextui-org/next-app-template
 ```
 
-### Install dependencies
+### Install dependencies to be
 
 You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
