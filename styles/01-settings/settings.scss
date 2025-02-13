@@ -63,8 +63,8 @@ $border-bold: "";
 $border-extra-bold: "";
 
 // FONTS GOOGLE
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-// @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap';
 
 // FONTS LOCALES
 @font-face {
@@ -124,8 +124,8 @@ $border-extra-bold: "";
 
   
 // CITRICA SYSTEM TYPOGRAPJY
-$font-family-a: 'Manrope';
-$font-family-b: 'Restora', sans-serif;
+$font-family-a: 'Roboto';
+$font-family-b: 'Poppins', sans-serif;
 $font-family-c: 'Poppins', sans-serif;
 
 // CITRICA SYSTEM OPACITY

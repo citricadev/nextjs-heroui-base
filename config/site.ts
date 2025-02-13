@@ -6,16 +6,16 @@ export const siteConfig = {
 	description: "Descripción Proyecto Web",
 	navLinks: [
 		{
-			id: "/",
 			title: "Inicio",
+			href: "/",
 		},
 		{
-			id: "/proyect",
 			title: "Proyectos",
+			href: "#proyect",
 		},
 		{
-			id: "/contact",
-			title: "Contacto",
+			title: "Panel",
+			href: "/panel",
 		},
 	],
 	sidebarItems: [

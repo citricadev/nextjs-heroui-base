@@ -51,7 +51,7 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(48,43,43,0.65)]" : "bg-secondary"}`}>
+    <nav className={`w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(48,43,43,0.65)]" : "bg-black"}`}>
       <Container>
         <Col noPadding cols={{ lg: 12, md: 6, sm: 4 }} className="h-16 flex justify-between items-center pt-3 pb-3">
           {/* Logo */}
@@ -78,18 +78,18 @@ const Navbar = () => {
           <ul className="only-lg-nav list-none gap-9">
             {siteConfig.navLinks.map((nav, index) => (
               <li
-                key={nav.id}
-                className={`flex cursor-pointer nav_link ${active === nav.id ? "nav_link_active" : ""}`}
-                onClick={() => setActive(nav.id)}
+                key={index}
+                className={`flex cursor-pointer nav_link ${active === nav.href ? "nav_link_active" : ""}`}
+                onClick={() => setActive(nav.href)}
               >
                 <Link
-                  className={`pb-1 px-4 text-white ${pathname === '/'
-                      ? (active === nav.id ? 'text-[#F7BB58]' : 'text-[#FFFFFF]')
+                  className={`text-white ${pathname === '/'
+                      ? (active === nav.href ? 'text-[#F7BB58]' : 'text-[#FFFFFF]')
                       : colorbg
-                        ? (active === nav.id ? 'text-[#F7BB58]' : 'text-[#FFFFFF]')
-                        : (active === nav.id ? 'text-[#F7BB58]' : 'text-[#000000]')
+                        ? (active === nav.href ? 'text-[#F7BB58]' : 'text-[#FFFFFF]')
+                        : (active === nav.href ? 'text-[#F7BB58]' : 'text-[#000000]')
                     }`}
-                  href={`${nav.id}`}
+                  href={`${nav.href}`}
                 >
                   {nav.title}
                 </Link>
@@ -108,18 +108,18 @@ const Navbar = () => {
               }
             </button>
             {/* Floating Menu */}
-            <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-black-gradient absolute top-[3px] bg-black-brand mx-4 my-2 min-w-[140px] rounded-xl z-50 `}>
+            <div className={`${!toggle ? "hidden" : "flex"} p-6 bg-black-gradient absolute top-[10px] right-18 bg-black-brand mx-4 my-2 min-w-[140px] rounded-xl z-50 `}>
               <ul className="list-none flex justify-end items-start flex-1 flex-col">
                 {siteConfig.navLinks.map((nav, index) => (
                   <li
-                    key={nav.id}
+                    key={index}
                     className={`text-white font-medium cursor-pointer text-[16px] ${index === siteConfig.navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                     onClick={() => {
-                      setActive(nav.id);
+                      setActive(nav.href);
                       closeSidebar();
                     }}
                   >
-                    <Link href={`#${nav.id}`}>
+                    <Link href={`#${nav.href}`}>
                       {nav.title}
                     </Link>
                   </li>
