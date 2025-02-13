@@ -119,7 +119,7 @@ const Navbar = () => {
                       closeSidebar();
                     }}
                   >
-                    <Link href={`#${nav.href}`}>
+                    <Link href={`${nav.href}`}>
                       {nav.title}
                     </Link>
                   </li>

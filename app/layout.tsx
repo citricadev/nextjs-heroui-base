@@ -36,7 +36,7 @@ export default function RootLayout({
 				{/* <SupabaseProvider> */}
 					{/* <AuthContextProvider> */}
 						<Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-						<Navbar />
+							{/* <Navbar /> */}
 							{children}
 						</Providers>
 					{/* </AuthContextProvider> */}

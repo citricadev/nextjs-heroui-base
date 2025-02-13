@@ -20,47 +20,47 @@ export const siteConfig = {
 	],
 	sidebarItems: [
 		{
-			title: "Panel",
-			icon: Home,
-			href: "/panel",
+			title: "Home",
+			icon: "Home",
+			href: "/",
 		},
 		{
-			title: "Acciones requeridas",
-			icon: ClipboardCheck,
-			href: "/acciones",
+			title: "Tareas",
+			icon: "ClipboardCheck",
+			href: "/panel/tareas",
 		},
 		{
 			title: "Configuración de la app",
-			icon: Settings,
+			icon: "Settings",
 			subItems: [
 				{
 					title: "Básica",
-					href: "/config/basica",
+					href: "/panel/config-app?type=basic",
 				},
 				{
 					title: "Avanzada",
-					href: "/config/avanzada",
+					href: "/panel/config-app?type=advanced",
 				},
 				{
 					title: "Mejorada",
-					href: "/config/mejorada",
+					href: "/panel/config-app?type=best",
 				},
 			],
 		},
 		{
 			title: "Roles de la app",
-			icon: Users,
-			href: "/roles",
+			icon: "Users",
+			href: "/users",
 		},
 		{
 			title: "Alertas",
-			icon: Bell,
-			href: "/alertas",
+			icon: "Bell",
+			href: "/alerts",
 		},
 		{
-			title: "Revisión de la app",
-			icon: ShieldCheck,
-			href: "/revision",
+			title: "Seguridad",
+			icon: "ShieldCheck",
+			href: "/secutiry",
 		},
 	],
 	links: {
