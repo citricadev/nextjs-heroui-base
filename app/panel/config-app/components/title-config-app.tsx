@@ -1,13 +1,21 @@
 'use client'
 import React from 'react'
 import Text from '@/shared/components/citrica-ui/atoms/text';
+import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation';
 
-const TitleConfigApp = () => {
+
+function Content() {
   const searchParams = useSearchParams();
-  const typeApp = searchParams.get('type');
+  const typeApp = searchParams.get('type'); 
+  return <div><Text variant="heading">{`Config App ${typeApp}`}</Text></div>
+}
+
+const TitleConfigApp = () => {
   return (
-    <div><Text variant="heading">{`Config App ${typeApp}`}</Text></div>
+    <Suspense>
+      <Content />
+    </Suspense>
   )
 }
 
