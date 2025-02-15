@@ -5,133 +5,85 @@
   }
 }
 
-$only-sm-display:(
-  sm:(
-    display:block,
-  ),
-  md:(
-    display: none,
-  ),
-  lg:(
-    display: none,
+// SM
+$only-sm-block:(
+  only-sm:(
+    display: block,
   )
 );
-
 .only-sm{
-  @include a-set($only-sm-display);
+  display: none;
+  @include a-set($only-sm-block);
 }
 
-$not-sm-display:(
-  sm:(
-    display:none,
-  ),
-  md:(
-    display: block,
-  ),
-  lg:(
-    display: block,
-  )
-);
-
-.not-sm{
-  @include a-set($not-sm-display);
-}
-
-$only-lg-display:(
-  sm:(
-    display:none,
-  ),
-  md:(
-    display: none,
-  ),
-  lg:(
-    display: flex,
-  )
-);
-
-.only-lg{
-  @include a-set($only-lg-display);
-}
-
-$not-lg-display:(
-  sm:(
-    display:block,
-  ),
-  md:(
-    display: block,
-  ),
-  lg:(
-    display: none,
-  )
-);
-
-.not-lg{
-  @include a-set($not-lg-display);
-}
-
-$only-md-display:(
-  sm:(
-    display:none,
-  ),
-  md:(
-    display: block,
-  ),
-  lg:(
-    display: none,
-  )
-);
-
-.only-md{
-  @include a-set($only-md-display);
-}
-
-$not-md-display:(
-  sm:(
-    display:block,
-  ),
-  md:(
-    display: none,
-  ),
-  lg:(
-    display: block,
-  )
-);
-
-.not-md{
-  @include a-set($not-md-display);
-}
-
-//
-
-
-$only-lg-nav-display:(
-  sm:(
-    display:none,
-  ),
-  md:(
-    display: none,
-  ),
-  lg:(
-    display: flex,
-  )
-);
-
-.only-lg-nav{
-  @include a-set($only-lg-nav-display);
-}
-
-$only-sm-md-display:(
-  sm:(
+$only-sm-flex:(
+  only-sm:(
     display:flex,
+  )
+);
+.only-sm-flex{
+  display: none;
+  @include a-set($only-sm-flex);
+}
+
+$not-sm-block:(
+  only-sm:(
+    display:none,
+  )
+);
+.not-sm{
+  display: block;
+  @include a-set($not-sm-block);
+}
+
+// MD
+$only-md-block:(
+  only-md:(
+    display: block,
   ),
-  md:(
-    display: flex,
-  ),
-  lg:(
+);
+.only-md{
+  display: none;
+  @include a-set($only-md-block);
+}
+
+$not-md-block:(
+  only-md:(
     display: none,
   )
 );
+.not-md{
+  display: block;
+  @include a-set($not-md-block);
+}
 
-.only-sm-md{
-  @include a-set($only-sm-md-display);
+// LG
+$only-lg-block:(
+  only-lg:(
+    display: block,
+  )
+);
+.only-lg{
+  display: none;
+  @include a-set($only-lg-block);
+}
+
+$not-lg-block:(
+  only-lg:(
+    display: none,
+  )
+);
+.not-lg{
+  display: block;
+  @include a-set($not-lg-block);
+}
+
+$only-lg-flex:(
+  only-lg:(
+    display: flex,
+  )
+);
+.only-lg-flex{
+  display: none;
+  @include a-set($only-lg-flex);
 }
