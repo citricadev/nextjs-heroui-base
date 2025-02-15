@@ -87,3 +87,19 @@ $only-lg-flex:(
   display: none;
   @include a-set($only-lg-flex);
 }
+
+$only-sm-md-flex:(
+  sm:(
+    display:flex,
+  ),
+  md:(
+    display: flex,
+  ),
+  lg:(
+    display: none,
+  )
+);
+
+.only-sm-md-flex{
+  @include a-set($only-sm-md-flex);
+}
