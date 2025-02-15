@@ -4,6 +4,7 @@ import Card from '@ui/atoms/card';
 import Text  from '@ui/atoms/text'; 
 import { Container, Col } from '@/styles/07-objects/objects';
 import Icon from '@ui/atoms/icon';
+import Button from '@/shared/components/citrica-ui/molecules/button';
 
 const SectionTypography = () => {
   return (
@@ -33,6 +34,9 @@ const SectionTypography = () => {
           </div>
           <div>
             <Text variant="label">Label</Text>
+          </div>
+          <div>
+            <Button label="Botón" onClick={()=>console.log('CLICK')} color="success"/>
           </div>
         </Col>
       </Container>
