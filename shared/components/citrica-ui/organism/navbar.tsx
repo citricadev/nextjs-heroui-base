@@ -75,7 +75,7 @@ const Navbar = () => {
           )}
 
           {/* Desktop Navigation */}
-          <ul className="only-lg-nav list-none gap-9">
+          <ul className="only-lg-flex list-none gap-9">
             {siteConfig.navLinks.map((nav, index) => (
               <li
                 key={index}
@@ -98,7 +98,7 @@ const Navbar = () => {
           </ul>
 
           {/* Mobile Navigation */}
-          <div ref={menuRef} className="only-sm-md flex justify-end items-center p-1 flex-1">
+          <div ref={menuRef} className="only-sm-md-flex justify-end items-center p-1 flex-1">
             <button onClick={() => setToggle(!toggle)} className="focus:outline-none cursor-pointer">
               { toggle ? ( 
                 <XIcon color="#FFF"/>
