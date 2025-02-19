@@ -4,7 +4,7 @@ import Card from '@ui/atoms/card';
 import Text  from '@ui/atoms/text'; 
 import { Container, Col } from '@/styles/07-objects/objects';
 import Icon from '@ui/atoms/icon';
-import Button from '@/shared/components/citrica-ui/molecules/button';
+import Button from '@ui/molecules/button';
 
 const SectionTypography = () => {
   return (
@@ -30,13 +30,13 @@ const SectionTypography = () => {
             <Text variant="subtitle">Subtitle</Text>
           </div> 
           <div> 
-            <Text variant="body">Body</Text>
+            <Text variant="body" weight='bold'>Body</Text>
           </div>
           <div>
             <Text variant="label">Label</Text>
           </div>
           <div>
-            <Button label="Botón" onClick={()=>console.log('CLICK')} color="success"/>
+            <Button label="Botón" onClick={()=>console.log('CLICK')} color="success" textVariant="body"/>
           </div>
         </Col>
       </Container>

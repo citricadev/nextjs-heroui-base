@@ -1,30 +1,6 @@
 // Typography
-$copy-responsive: (
-  sm: (
-      font-size: 12px,
-      line-height: 22px
-  ),
-  md: (
-    font-size: 14px,
-    line-height: 24px
-  ),
-  lg: (
-    font-size: 16px,
-    line-height: 26px
-  )
-);
-.copy {
-  font-family: var(--font-family-c);
-  font-weight: 500;
-  letter-spacing: 0;
-  text-decoration: none;
-  text-transform: none;
-  @include a-set($copy-responsive);
-  &-bold{
-    font-weight: 700;
-  }
-}
 
+// DISPLAY
 $display-responsive: (
   sm: (
       font-size: 28px,
@@ -39,15 +15,22 @@ $display-responsive: (
     line-height: 66px
   )
 );
-.display {
+.text-display {
   font-family: var(--font-family-a);
   font-weight: normal;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($display-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
 }
 
+// HEADLINE
 $headline-responsive: (
   sm: (
       font-size: 32px,
@@ -63,14 +46,22 @@ $headline-responsive: (
   )
 );
 
-.headline {
+.text-headline {
   font-family: var(--font-family-a);
   font-weight: normal;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($headline-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
 }
+
+// TITLE
 $title-responsive: (
   sm: (
       font-size: 21px,
@@ -85,14 +76,22 @@ $title-responsive: (
     line-height: 37px
   )
 );
-.title {
-  font-family: var(--font-family-a);
+.text-title {
+  font-family: var(--font-family-b);
   font-weight: 500;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($title-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
 }
+
+// SUBTITLE
 $subtitle-responsive: (
   sm: (
       font-size: 10pt,
@@ -107,14 +106,52 @@ $subtitle-responsive: (
     line-height: 22px
   )
 );
-.subtitle {
+.text-subtitle {
   font-family: var(--font-family-a);
   font-weight: 500;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($subtitle-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
 }
+
+// BODY
+$body-responsive: (
+  sm: (
+      font-size: 12px,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 14px,
+    line-height: 24px
+  ),
+  lg: (
+    font-size: 16px,
+    line-height: 26px
+  )
+);
+.text-body {
+  font-family: var(--font-family-c);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($body-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// LABEL
 $label-responsive: (
   sm: (
       font-size: 10pt,
@@ -129,14 +166,22 @@ $label-responsive: (
     line-height: 16px
   )
 );
-.label {
+.text-label {
   font-family: var(--font-family-a);
   font-weight: normal;
   letter-spacing: 0;
   text-decoration: none;
   text-transform: none;
   @include a-set($label-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
 }
+
+// BUTTONS
 
 .btn {
   font-family: var(--font-family-a);
@@ -166,71 +211,11 @@ $label-responsive: (
   text-transform: none;
 }
 // Typography colors
-.text-gold-lightest{
-  color: #F4EAD7;
-}
-.text-gold-light{
-  color: #E8D5B0;
-}
-.text-gold-brand{
-  color: #D5B16C;
-}
-.text-gold-dark{
-  color: #A38243;
-}
-.text-gold-darkest{
-  color: #4F3C17;
-}
-
-.text-gray-lightest{
-  color: #B3B3B2; // FALTA DEFINIR
-}
-.text-gray-light{
-  color: #B3B3B2; // FALTA DEFINIR
-}
-.text-gray-brand{
-  color: #B3B3B2;
-}
-.text-gray-dark{
-  color: #555; // FALTA DEFINIR
-}
-.text-gray-darkest{
-  color: #B3B3B2; // FALTA DEFINIR
-}
-
 // background colors
-
-.bg-red-lightest{
-  background-color: #FDD9DC;
-}
-
-.bg-red-light{
-  background-color: #F55764;
-}
-
-.bg-red-brand{
-  background-color: #E40E20;
-}
-
-.bg-red-dark{
-  background-color: #A30A17;
-}
-
-.bg-red-darkest{
-  background-color: #48040A;
-}
-
-.bg-black-brand{
-  background-color: #1D1D1B;
-}
-
-.bg-gold-brand{
-  background-color: #D5B16C;
-}
 
 // color navbar
 
-.navbar-text-color :hover{
-  color: #D5B16C;
-}
+// .navbar-text-color :hover{
+//   color: #D5B16C;
+// }
 
