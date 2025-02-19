@@ -21,7 +21,17 @@ export const siteConfig = {
 	sidebarItems: [
 		{
 			title: "Home",
-			icon: "Home",
+			icon: "Settings",
+			href: "/",
+		},
+		{
+			title: "Hola",
+			icon: "Settings",
+			href: "/",
+		},
+		{
+			title: "Ber",
+			icon: "Settings",
 			href: "/",
 		},
 		{
