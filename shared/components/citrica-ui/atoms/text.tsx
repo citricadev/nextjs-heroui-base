@@ -7,42 +7,14 @@ interface TextProps {
   color?: string;
 }
 
-const DEFAULT_COLOR = '#222';
+const Text: React.FC<TextProps> = ({ children, variant, color, weight = 'normal' }) => {
 
-const variantStyles: { [key in TextProps['variant']]: React.CSSProperties } = {
-  display: {
-    fontSize: '48px',
-    fontWeight: 700,
-    lineHeight: 1.2,
-  },
-  heading: {
-    fontSize: '36px',
-    fontWeight: 700,
-    lineHeight: 1.2,
-  },
-  title: {
-    fontSize: '24px',
-    fontWeight: 700,
-    lineHeight: 1.2,
-  },
-  subtitle: {
-    fontSize: '20px',
-    fontWeight: 700,
-    lineHeight: 1.2,
-  },
-  body: {
-    fontSize: '16px',
-    fontWeight: 400,
-    lineHeight: 1.2,
-  },
-  label: {
-    fontSize: '12px',
-    fontWeight: 400,
-    lineHeight: 1.2,
-  },
-};
+  const variantStyles = {
+    textColor: {
+      color: color ? color: 'auto',
+    },
+  };
 
-const Text: React.FC<TextProps> = ({ children, variant, color = DEFAULT_COLOR, weight = 'normal' }) => {
   switch (weight) {
     case 'light':
       var classWeight = ` text-${variant}-light`;
@@ -59,7 +31,8 @@ const Text: React.FC<TextProps> = ({ children, variant, color = DEFAULT_COLOR, w
   } 
   return (
     <span 
-      className={`text-${variant}${classWeight}`}
+      className={`text-${variant}${classWeight} ${!color ? 'text-default-color': ''}`}
+      style={variantStyles.textColor}
       >
     {children}
     </span>

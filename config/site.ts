@@ -25,16 +25,6 @@ export const siteConfig = {
 			href: "/",
 		},
 		{
-			title: "Hola",
-			icon: "Settings",
-			href: "/",
-		},
-		{
-			title: "Ber",
-			icon: "Settings",
-			href: "/",
-		},
-		{
 			title: "Tareas",
 			icon: "ClipboardCheck",
 			href: "/panel/tareas",

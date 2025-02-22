@@ -49,7 +49,7 @@ export function Sidebar({ items }: SidebarProps) {
   }
 
   const NavItems = () => (
-    <div className="h-[calc(100vh-4rem)] w-full overflow-y-auto px-2 py-4">
+    <div className="h-[100svh] w-full overflow-y-auto px-2 py-4 bg-sidebar">
       {items.map((item) => (
         <div key={item.title} className="mb-2">
           {item.subItems ? (
@@ -66,7 +66,7 @@ export function Sidebar({ items }: SidebarProps) {
               className="w-full justify-start gap-2 px-4 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               <Icon name={item.icon} size={20} />
-              <Text variant="label">{item.title}</Text>
+              <Text variant="label" color="on-primary">{item.title}</Text>
             </Button>
           )}
         </div>
@@ -84,7 +84,7 @@ export function Sidebar({ items }: SidebarProps) {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-72 transform bg-background transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-72 transform bg-sidebar transition-transform duration-300 ease-in-out md:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
