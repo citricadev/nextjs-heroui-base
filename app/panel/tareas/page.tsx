@@ -3,7 +3,7 @@ import Text from '@/shared/components/citrica-ui/atoms/text'
 
 const TareasPage = () => {
   return (
-    <div><Text variant="heading">Tareas</Text></div>
+    <div><Text variant="title" color="#F94">Tareas</Text></div>
   )
 }
 

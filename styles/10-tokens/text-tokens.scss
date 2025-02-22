@@ -1,0 +1,187 @@
+// TEXT TOKEN: Typography
+
+// DISPLAY
+$display-responsive: (
+  sm: (
+      font-size: 28px,
+      line-height: 36px
+  ),
+  md: (
+    font-size: 56px,
+    line-height: 66px
+  ),
+  lg: (
+    font-size: 56px,
+    line-height: 66px
+  )
+);
+.text-display {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($display-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// HEADLINE
+$headline-responsive: (
+  sm: (
+      font-size: 32px,
+      line-height: 33px
+  ),
+  md: (
+    font-size: 64px,
+    line-height: 72px
+  ),
+  lg: (
+    font-size: 64px,
+    line-height: 72px
+  )
+);
+
+.text-headline {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($headline-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// TITLE
+$title-responsive: (
+  sm: (
+      font-size: 21px,
+      line-height: 37px
+  ),
+  md: (
+    font-size: 29px,
+    line-height: 37px
+  ),
+  lg: (
+    font-size: 29px,
+    line-height: 37px
+  )
+);
+.text-title {
+  font-family: var(--font-family-b);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($title-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// SUBTITLE
+$subtitle-responsive: (
+  sm: (
+      font-size: 10pt,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 14pt,
+    line-height: 22px
+  ),
+  lg: (
+    font-size: 14pt,
+    line-height: 22px
+  )
+);
+.text-subtitle {
+  font-family: var(--font-family-a);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($subtitle-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// BODY
+$body-responsive: (
+  sm: (
+      font-size: 12px,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 14px,
+    line-height: 24px
+  ),
+  lg: (
+    font-size: 16px,
+    line-height: 26px
+  )
+);
+.text-body {
+  font-family: var(--font-family-c);
+  font-weight: 500;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($body-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// LABEL
+$label-responsive: (
+  sm: (
+      font-size: 10pt,
+      line-height: 22px
+  ),
+  md: (
+    font-size: 12pt,
+    line-height: 16px
+  ),
+  lg: (
+    font-size: 12pt,
+    line-height: 16px
+  )
+);
+.text-label {
+  font-family: var(--font-family-a);
+  font-weight: normal;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  @include a-set($label-responsive);
+  &-bold{
+    font-weight: 700;
+  }
+  &-light{
+    font-weight: 200;
+  }
+}
+
+// Default color
+.text-default-color {
+  color: var(--text-default-color);
+}

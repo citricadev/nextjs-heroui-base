@@ -35,7 +35,7 @@ export default function RootLayout({
 				<Toaster/>
 				{/* <SupabaseProvider> */}
 					{/* <AuthContextProvider> */}
-						<Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
+						<Providers themeProps={{ attribute: "data-theme", defaultTheme: "light" }}>
 							{/* <Navbar /> */}
 							{children}
 						</Providers>
