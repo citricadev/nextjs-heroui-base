@@ -1,6 +1,8 @@
 // COLORS
 
 // CITRICA SYSTEM COLORS
+$color-text-white: #EBE9E0;
+$color-text-black: #111111;
 
 $color-light-primary: #6750A4;
 $color-light-on-primary: #FFFFFF;
@@ -93,20 +95,20 @@ $color-dark-on-quinary-fixed-variant: #FFFFFF;
 $color-dark-quinary-fixed-dim: #FFFFFF;
 
 // SEMANTIC COLORS
-$color-light-error: #B3261E;
+$color-light-error: #D40F36;
 $color-light-on-error: #FFFFFF;
-$color-light-error-container: #F9DEDC;
-$color-light-on-error-container: #410E0B;
+$color-light-error-container: #FCCFD8;
+$color-light-on-error-container: #30030C;
 
-$color-light-warning: #C29D0A;
+$color-light-warning: #FAAC0F;
 $color-light-on-warning: #FFFFFF;
-$color-light-warning-container: #FCF3CF;
-$color-light-on-warning-container: #302702;
+$color-light-warning-container: #FEEECD;
+$color-light-on-warning-container: #322201;
 
-$color-light-success: #57A626;
+$color-light-success: #94C20A;
 $color-light-on-success: #FFFFFF;
-$color-light-success-container: #DCF4CD;
-$color-light-on-success-container: #162A09;
+$color-light-success-container: #F1FCCF;
+$color-light-on-success-container: #253003;
 
 $color-dark-error: #F2B8B5;
 $color-dark-on-error: #601410;
@@ -136,12 +138,12 @@ $color-light-surface-container-low: #F2F2F2;
 $color-light-surface-container-high: #E6E6E6;
 $color-light-surface-container-highest: #E0E0E0;
 
-$color-light-outline: #776C93;
-$color-light-outline-variant: #C0BCCD;
+$color-light-outline: #9B9164;
+$color-light-outline-variant: #D7D3C1;
 
 $color-light-inverse-surface: #333333;
 $color-light-inverse-on-surface: #F2F2F2;
-$color-light-inverse-primary: #D0BCFF;
+$color-light-inverse-primary: #F8A0B1;
 
 $color-dark-surface: #1F1F1F;
 $color-dark-on-surface: #E0E0E0;

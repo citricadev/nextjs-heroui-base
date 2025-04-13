@@ -8,7 +8,7 @@ import { useSearchParams } from 'next/navigation';
 function Content() {
   const searchParams = useSearchParams();
   const typeApp = searchParams.get('type'); 
-  return <div><Text variant="heading">{`Config App ${typeApp}`}</Text></div>
+  return <div><Text variant="headline">{`Config App ${typeApp}`}</Text></div>
 }
 
 const TitleConfigApp = () => {

@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import Card from '@ui/atoms/card';
-import Text  from '@ui/atoms/text'; 
+import Text from '@ui/atoms/text';
 import { Container, Col } from '@/styles/07-objects/objects';
 import Icon from '@ui/atoms/icon';
 import Button from '@ui/molecules/button';
@@ -19,32 +19,32 @@ const SectionTypography = () => {
             <Icon name="ChevronLeft" size={80} />
           </div>
           <div>
-            <Text variant="display" color="primary">Display</Text>
+            <Text variant="display" textColor="color-on-container">Display</Text>
           </div>
           <section>
             <h1>
-              <Text variant="heading" color="primary">Heading</Text>
+              <Text variant="headline" textColor="color-on-container">Headline</Text>
             </h1>
-          </section> 
+          </section>
           <div>
-            <Text variant="title" color="quinary">Title</Text>
+            <Text variant="title" textColor="color-on-container">Title</Text>
           </div>
-          <div> 
-            <Text variant="subtitle">Subtitle</Text>
-          </div> 
-          <div> 
+          <div>
+            <Text variant="subtitle" color="#F00">Subtitle</Text>
+          </div>
+          <div>
             <Text variant="body" weight='bold'>Body</Text>
           </div>
           <div>
             <Text variant="label">Label</Text>
           </div>
           <div>
-            <Button label="Botón" onClick={()=>console.log('CLICK')} color="success" textVariant="body"/>
+            <Button label="Botón" onClick={() => console.log('CLICK')} color="success" textVariant="body" />
           </div>
         </Col>
       </Container>
       <Container>
-        <Col cols={{lg:12, md:6, sm:4}}>
+        <Col cols={{ lg: 12, md: 6, sm: 4 }}>
           <button
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="rounded-md p-2 hover:bg-accent"

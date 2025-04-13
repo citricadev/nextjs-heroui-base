@@ -2,6 +2,10 @@
 @import './colors.scss';
 
 @mixin light-theme {
+  // Black & white
+  --color-text-white: #{$color-text-white};
+  --color-text-black: #{$color-text-black};
+    
   // Primary colors
   --color-primary: #{$color-light-primary};
   --color-on-primary: #{$color-light-on-primary};

@@ -22,7 +22,6 @@ export const Container = ({className = '', noPadding = false, noLimit=false, chi
         <div className={classes}>{children}</div>
     )
 }
-
 export const Col = ({cols, noPadding=false, className="", children}) => {
     const { lg, md, sm, lgPush, mdPush, smPush } = cols;
 

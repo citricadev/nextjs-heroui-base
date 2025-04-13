@@ -1,7 +1,11 @@
 // _dark-theme.scss
-@import 'colors.scss';
+@import './colors.scss';
 
 @mixin dark-theme {
+  // Black & white
+  --color-text-white: #{$color-text-white};
+  --color-text-black: #{$color-text-black};
+  
   // Primary colors
   --color-primary: #{$color-dark-primary};
   --color-on-primary: #{$color-dark-on-primary};
