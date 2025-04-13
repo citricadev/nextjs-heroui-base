@@ -1,19 +1,9 @@
 import React from 'react';
+import { TextProps } from '@/shared/types/components/text.type';
 
-interface TextProps {
-  children: React.ReactNode;
-  variant: 'display' | 'heading' | 'title' | 'subtitle' | 'body' | 'label';
-  weight?: 'light' | 'normal' | 'bold';
-  color?: string;
-}
+const Text: React.FC<TextProps> = ({ children, variant, color, weight = 'normal', textColor='color-text-black'}) => {
 
-const Text: React.FC<TextProps> = ({ children, variant, color, weight = 'normal' }) => {
-
-  const variantStyles = {
-    textColor: {
-      color: color ? color: 'auto',
-    },
-  };
+  const colorStyle = color ? { color } : { color: `var(--${textColor})`  };
 
   switch (weight) {
     case 'light':
@@ -31,8 +21,10 @@ const Text: React.FC<TextProps> = ({ children, variant, color, weight = 'normal'
   } 
   return (
     <span 
-      className={`text-${variant}${classWeight} ${!color ? 'text-default-color': ''}`}
-      style={variantStyles.textColor}
+      className={`text-${variant}${classWeight}`}
+      style={{
+        ...colorStyle,
+      }}
       >
     {children}
     </span>
