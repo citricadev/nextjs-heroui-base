@@ -39,7 +39,7 @@ const SectionTypography = () => {
             <Text variant="label">Label</Text>
           </div>
           <div>
-            <Button label="Botón" onClick={() => console.log('CLICK')} color="success" textVariant="body" />
+            <Button label="Botón" onClick={() => console.log('CLICK')} variant="secondary" />
           </div>
         </Col>
       </Container>
