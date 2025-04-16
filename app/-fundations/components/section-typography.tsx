@@ -19,7 +19,7 @@ const SectionTypography = () => {
           </div>
           <section>
             <h1>
-              <Text variant="heading" color="primary">Heading</Text>
+              <Text variant="headline" color="primary">Heading</Text>
             </h1>
           </section> 
           <div>
