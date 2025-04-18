@@ -4,19 +4,24 @@ import React from "react"
 import { Button, Link } from "@heroui/react"
 import { ChevronDown, Menu } from "lucide-react"
 import type { SidebarProps, MenuItem } from "../../../types/sidebar"
-import Icon from "@/shared/components/citrica-ui/atoms/icon"
+import Icon, { IconName } from "@/shared/components/citrica-ui/atoms/icon"
 import Text from "../atoms/text"
+import { usePathname } from 'next/navigation';
+import { useSearchParams } from 'next/navigation'
+import { getParamFromPath } from "@/shared/utils/general"
 
-function AccordionItem({ item, isOpen, onToggle }: { item: MenuItem; isOpen: boolean; onToggle: () => void }) {
+const SUBLINK_SEARCH_PARAM = "type";
+
+function AccordionItem({ item, isOpen, onToggle, subItemPath }: { item: MenuItem; isOpen: boolean; onToggle: () => void, subItemPath: string }) {
   return (
     <div>
       <Button
-        className="w-full justify-between px-4 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+        className= {`w-full justify-between px-4 py-2 transition-colors hover:bg-gray-100`}
         variant="light"
         onPress={onToggle}
       >
         <span className="flex items-center gap-2">
-          <Icon name={item.icon} size={20} />
+          <Icon name={item.icon as IconName} size={20} />
           <Text variant="label">{item.title}</Text>
         </span>
         <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
@@ -29,7 +34,7 @@ function AccordionItem({ item, isOpen, onToggle }: { item: MenuItem; isOpen: boo
               as={Link}
               href={subItem.href}
               variant="light"
-              className="justify-start px-4 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+              className={`justify-start px-4 py-2 transition-colors hover:bg-gray-100 ${ getParamFromPath(subItem.href, SUBLINK_SEARCH_PARAM) === subItemPath ? "bg-gray-100" : ""}`}
             >
             <Text variant="label">{subItem.title}</Text>
             </Button>
@@ -43,6 +48,9 @@ function AccordionItem({ item, isOpen, onToggle }: { item: MenuItem; isOpen: boo
 export function Sidebar({ items }: SidebarProps) {
   const [isOpen, setIsOpen] = React.useState(false)
   const [openItems, setOpenItems] = React.useState<Record<string, boolean>>({})
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const queryParam = searchParams.get(SUBLINK_SEARCH_PARAM) || "";
 
   const toggleItem = (title: string) => {
     setOpenItems((prev) => ({ ...prev, [title]: !prev[title] }))
@@ -55,17 +63,18 @@ export function Sidebar({ items }: SidebarProps) {
           {item.subItems ? (
             <AccordionItem
               item={item}
-              isOpen={openItems[item.title] || false}
+              isOpen={openItems[item.title] || item.href == pathname || false}
               onToggle={() => toggleItem(item.title)}
+              subItemPath={queryParam}
             />
           ) : (
             <Button
               as={Link}
               href={item.href || "#"}
               variant="light"
-              className="w-full justify-start gap-2 px-4 py-2 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+              className= {`w-full justify-start gap-2 px-4 py-2 transition-colors hover:bg-gray-100 ${item.href=== pathname ? "bg-gray-100" : ""}`}
             >
-              <Icon name={item.icon} size={20} />
+              <Icon name={item.icon as IconName} size={20} />
               <Text variant="label" color="on-primary">{item.title}</Text>
             </Button>
           )}

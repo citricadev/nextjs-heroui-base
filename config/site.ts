@@ -32,6 +32,7 @@ export const siteConfig = {
 		{
 			title: "Configuración de la app",
 			icon: "Settings",
+			href: "/panel/config-app", // ONLY TO DETERMINE ACTIVE, IS NOT LINKING
 			subItems: [
 				{
 					title: "Básica",
