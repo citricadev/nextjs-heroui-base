@@ -4,7 +4,6 @@ import Text from '@/shared/components/citrica-ui/atoms/text';
 import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation';
 
-
 function Content() {
   const searchParams = useSearchParams();
   const typeApp = searchParams.get('type'); 
