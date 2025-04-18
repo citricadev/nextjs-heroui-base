@@ -1,11 +1,11 @@
 /* SOLO TAGS, STYLES GENERALES*/
 html{
+    height: auto;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased; /* Chrome, Safari */
     -moz-osx-font-smoothing: grayscale; /*Firefox */
     font-family: $font-family-b;
     font-weight: 400;
-    color: #222;
     scroll-behavior: smooth;
 }
 
@@ -54,8 +54,7 @@ a{
 }
 
 // CUSTOM
-
-body{
-    background-color: var(--color-surface);
-    height: 100svh;
+html, body {
+    background-color: var(--color-surface) !important;
+    min-height: 100vh;
 }
