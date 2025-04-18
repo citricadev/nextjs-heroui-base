@@ -11,7 +11,7 @@ import { useTheme } from "next-themes";
 const SectionTypography = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="pt-[64px]">
+    <>
       <Container>
         <Col cols={{ lg: 12, md: 6, sm: 4 }}>
           <div>
@@ -54,7 +54,7 @@ const SectionTypography = () => {
           </button>
         </Col>
       </Container>
-    </div>
+    </>
   )
 }
 
