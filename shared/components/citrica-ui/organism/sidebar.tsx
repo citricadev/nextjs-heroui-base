@@ -1,6 +1,6 @@
 "use client"
-
 import React from "react"
+import { Suspense } from 'react';
 import { Button, Link } from "@heroui/react"
 import { ChevronDown, Menu } from "lucide-react"
 import type { SidebarProps, MenuItem } from "../../../types/sidebar"
@@ -12,7 +12,9 @@ import { getParamFromPath } from "@/shared/utils/general"
 
 const SUBLINK_SEARCH_PARAM = "type";
 
-function AccordionItem({ item, isOpen, onToggle, subItemPath }: { item: MenuItem; isOpen: boolean; onToggle: () => void, subItemPath: string }) {
+function AccordionItem({ item, isOpen, onToggle }: { item: MenuItem; isOpen: boolean; onToggle: () => void }) {
+  const searchParams = useSearchParams();
+  const queryParam = searchParams.get(SUBLINK_SEARCH_PARAM) || "";
   return (
     <div>
       <Button
@@ -34,7 +36,7 @@ function AccordionItem({ item, isOpen, onToggle, subItemPath }: { item: MenuItem
               as={Link}
               href={subItem.href}
               variant="light"
-              className={`justify-start px-4 py-2 transition-colors hover:bg-gray-100 ${ getParamFromPath(subItem.href, SUBLINK_SEARCH_PARAM) === subItemPath ? "bg-gray-100" : ""}`}
+              className={`justify-start px-4 py-2 transition-colors hover:bg-gray-100 ${ getParamFromPath(subItem.href, SUBLINK_SEARCH_PARAM) === queryParam ? "bg-gray-100" : ""}`}
             >
             <Text variant="label">{subItem.title}</Text>
             </Button>
@@ -49,8 +51,6 @@ export function Sidebar({ items }: SidebarProps) {
   const [isOpen, setIsOpen] = React.useState(false)
   const [openItems, setOpenItems] = React.useState<Record<string, boolean>>({})
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const queryParam = searchParams.get(SUBLINK_SEARCH_PARAM) || "";
 
   const toggleItem = (title: string) => {
     setOpenItems((prev) => ({ ...prev, [title]: !prev[title] }))
@@ -61,12 +61,13 @@ export function Sidebar({ items }: SidebarProps) {
       {items.map((item) => (
         <div key={item.title} className="mb-2">
           {item.subItems ? (
-            <AccordionItem
-              item={item}
-              isOpen={openItems[item.title] || item.href == pathname || false}
-              onToggle={() => toggleItem(item.title)}
-              subItemPath={queryParam}
-            />
+            <Suspense fallback={<div>Cargando...</div>}>
+              <AccordionItem
+                item={item}
+                isOpen={openItems[item.title] || item.href == pathname || false}
+                onToggle={() => toggleItem(item.title)}
+              />
+            </Suspense>
           ) : (
             <Button
               as={Link}
