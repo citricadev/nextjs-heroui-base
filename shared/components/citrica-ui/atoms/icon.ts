@@ -16,7 +16,7 @@ interface IconProps extends LucideProps {
 
 // EDIT HERE
 const DEFAULT_SIZE = 20;
-const DEFAULT_STROKE_WIDTH = 1.5;
+const DEFAULT_STROKE_WIDTH = 2;
 const DEFAULT_FALLBACK: IconName = 'AlertCircle';
 
 const Icon = ({ 

@@ -7,6 +7,7 @@ import Icon from '@ui/atoms/icon';
 import Button from '@ui/molecules/button';
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import {addToast} from "@heroui/toast";
 
 const SectionTypography = () => {
   const { theme, setTheme } = useTheme();
@@ -15,7 +16,7 @@ const SectionTypography = () => {
       <Container>
         <Col cols={{ lg: 12, md: 6, sm: 4 }}>
           <div>
-            <Icon name="Award" size={40} strokeWidth={1} />
+            <Icon name="AlarmClockMinus" size={40} />
             <Icon name="ChevronLeft" size={80} />
           </div>
           <div>
@@ -39,7 +40,17 @@ const SectionTypography = () => {
             <Text variant="label">Label</Text>
           </div>
           <div>
-            <Button label="Botón" onClick={() => console.log('CLICK')} variant="secondary" />
+            <Button 
+              onClick={() => {
+                addToast({
+                  title: "Toast title",
+                  description: "Toast displayed successfully",
+                  color: "success",
+                  radius: "sm",
+                });
+              }}
+              label="New Toast Test"
+              variant="secondary" />
           </div>
         </Col>
       </Container>

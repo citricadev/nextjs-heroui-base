@@ -9,8 +9,9 @@ import Text from "../atoms/text"
 import { usePathname } from 'next/navigation';
 import { useSearchParams } from 'next/navigation'
 import { getParamFromPath } from "@/shared/utils/general"
+import { siteConfig } from "@/config/site";
 
-const SUBLINK_SEARCH_PARAM = "type";
+const SUBLINK_SEARCH_PARAM = siteConfig.subItemSearchParam;
 
 function AccordionItem({ item, isOpen, onToggle }: { item: MenuItem; isOpen: boolean; onToggle: () => void }) {
   const searchParams = useSearchParams();

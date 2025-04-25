@@ -45,7 +45,7 @@ const Navbar = () => {
   return (
     <nav className={`w-screen fixed box-border z-30 h-16 ${colorbg ? "bg-[rgba(48,43,43,0.65)]" : "bg-black"}`}>
       <Container>
-        <Col noPadding cols={{ lg: 12, md: 6, sm: 4 }} className="h-16 flex justify-between items-center pt-3 pb-3">
+        <Col cols={{ lg: 12, md: 6, sm: 4 }} className="h-16 flex justify-between items-center pt-3 pb-3">
           {/* Logo */}
           {pathname === '/' ? (
             <div>
@@ -56,7 +56,6 @@ const Navbar = () => {
               </picture>
             </div>
           ) : (
-
             <div className="flex cursor-pointer">
               <picture >
                 <Link href={"/"} >
@@ -65,7 +64,6 @@ const Navbar = () => {
               </picture>
             </div>
           )}
-
           {/* Desktop Navigation */}
           <ul className="only-lg-flex list-none gap-9">
             {siteConfig.navLinks.map((nav, index) => (
@@ -88,17 +86,14 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-
-          {/* Mobile Navigation */}
           <div ref={menuRef} className="only-sm-md-flex justify-end items-center p-1 flex-1">
-            <Button variant="light" onPress={() => onOpen()}>
+            <Button size="sm" variant="light" onPress={() => onOpen()}>
               <Icon name="Menu" color="#FFF" size={24} strokeWidth={2}/>
             </Button>
-            {/* Floating Menu */}
           </div>
-
         </Col>
       </Container>
+      {/* Mobile Navigation */}
       <Drawer isOpen={isOpen} size={"xs"} onClose={onClose}>
         <DrawerContent>
           {(onClose) => (
