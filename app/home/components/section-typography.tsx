@@ -7,15 +7,16 @@ import Icon from '@ui/atoms/icon';
 import Button from '@ui/molecules/button';
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import {addToast} from "@heroui/toast";
 
 const SectionTypography = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="pt-[64px]">
+    <>
       <Container>
         <Col cols={{ lg: 12, md: 6, sm: 4 }}>
           <div>
-            <Icon name="Home" size={20} />
+            <Icon name="AlarmClockMinus" size={40} />
             <Icon name="ChevronLeft" size={80} />
           </div>
           <div>
@@ -39,7 +40,17 @@ const SectionTypography = () => {
             <Text variant="label">Label</Text>
           </div>
           <div>
-            <Button label="Botón" onClick={() => console.log('CLICK')} color="success" textVariant="body" />
+            <Button 
+              onClick={() => {
+                addToast({
+                  title: "Toast title",
+                  description: "Toast displayed successfully",
+                  color: "success",
+                  radius: "sm",
+                });
+              }}
+              label="New Toast Test"
+              variant="secondary" />
           </div>
         </Col>
       </Container>
@@ -49,13 +60,12 @@ const SectionTypography = () => {
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
             className="rounded-md p-2 hover:bg-accent"
           >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <Icon name="Sun" size={24} strokeWidth={1.4} className="text-on-accent" />
             <span className="sr-only">Toggle theme</span>
           </button>
         </Col>
       </Container>
-    </div>
+    </>
   )
 }
 

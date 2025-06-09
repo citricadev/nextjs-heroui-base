@@ -1,6 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 import { Home, ClipboardCheck, Settings, Users, Bell, ShieldCheck } from "lucide-react"
 
+const SUBITEM_SEARCH_PARAM = "page";
+
 export const siteConfig = {
 	name: "Proyecto Web",
 	description: "Descripción Proyecto Web",
@@ -18,6 +20,7 @@ export const siteConfig = {
 			href: "/panel",
 		},
 	],
+	subItemSearchParam: SUBITEM_SEARCH_PARAM, // FOR SUBSECTIONS IN SIDEBAR
 	sidebarItems: [
 		{
 			title: "Home",
@@ -32,18 +35,19 @@ export const siteConfig = {
 		{
 			title: "Configuración de la app",
 			icon: "Settings",
+			href: "/panel/config-app", // ONLY TO DETERMINE ACTIVE, IS NOT LINKING
 			subItems: [
 				{
 					title: "Básica",
-					href: "/panel/config-app?type=basic",
+					href: "/panel/config-app?" + SUBITEM_SEARCH_PARAM + "=basic",
 				},
 				{
 					title: "Avanzada",
-					href: "/panel/config-app?type=advanced",
+					href: "/panel/config-app?" + SUBITEM_SEARCH_PARAM + "=advanced",
 				},
 				{
 					title: "Mejorada",
-					href: "/panel/config-app?type=best",
+					href: "/panel/config-app?" + SUBITEM_SEARCH_PARAM + "=best",
 				},
 			],
 		},

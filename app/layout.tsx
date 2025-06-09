@@ -32,7 +32,7 @@ export default function RootLayout({
 			<head />
 			<body
 			>
-				<Toaster/>
+				{/* <Toaster/>  SE CAMBIÓ POR HEROUI TOAST*/}
 				{/* <SupabaseProvider> */}
 					{/* <AuthContextProvider> */}
 						<Providers themeProps={{ attribute: "data-theme", defaultTheme: "light" }}>

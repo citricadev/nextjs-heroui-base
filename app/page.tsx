@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <section>
+      <section className="pt-[64px]">
         <SectionTypography />
         <SectionSkeleton />
       </section>
